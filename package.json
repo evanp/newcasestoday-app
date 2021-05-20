@@ -2,7 +2,7 @@
   "name": "new-cases-today-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://evanp.github.io/newcasestoday-app",
+  "homepage": "https://newcasestoday.app/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.5.1",
     "@testing-library/jest-dom": "^5.11.4",
