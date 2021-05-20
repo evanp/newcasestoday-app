@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import './NewCasesToday.css';
 import { useDispatch, useSelector } from 'react-redux';
 
-const MONTREAL_URL = "/courbe.csv"
+const MONTREAL_URL = "courbe.csv"
 
 export default function NewCasesToday() {
     const newCases = useSelector(state => state.newCases)
