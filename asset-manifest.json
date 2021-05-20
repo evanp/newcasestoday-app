@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/newcasestoday-app/static/css/main.55f69435.chunk.css",
-    "main.js": "/newcasestoday-app/static/js/main.cb767cbf.chunk.js",
-    "main.js.map": "/newcasestoday-app/static/js/main.cb767cbf.chunk.js.map",
+    "main.js": "/newcasestoday-app/static/js/main.b8e3ba02.chunk.js",
+    "main.js.map": "/newcasestoday-app/static/js/main.b8e3ba02.chunk.js.map",
     "runtime-main.js": "/newcasestoday-app/static/js/runtime-main.8b917f61.js",
     "runtime-main.js.map": "/newcasestoday-app/static/js/runtime-main.8b917f61.js.map",
     "static/js/2.175c03b4.chunk.js": "/newcasestoday-app/static/js/2.175c03b4.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.8b917f61.js",
     "static/js/2.175c03b4.chunk.js",
     "static/css/main.55f69435.chunk.css",
-    "static/js/main.cb767cbf.chunk.js"
+    "static/js/main.b8e3ba02.chunk.js"
   ]
 }
