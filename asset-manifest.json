@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/newcasestoday-app/static/css/main.55f69435.chunk.css",
+    "main.js": "/newcasestoday-app/static/js/main.cb767cbf.chunk.js",
+    "main.js.map": "/newcasestoday-app/static/js/main.cb767cbf.chunk.js.map",
+    "runtime-main.js": "/newcasestoday-app/static/js/runtime-main.8b917f61.js",
+    "runtime-main.js.map": "/newcasestoday-app/static/js/runtime-main.8b917f61.js.map",
+    "static/js/2.175c03b4.chunk.js": "/newcasestoday-app/static/js/2.175c03b4.chunk.js",
+    "static/js/2.175c03b4.chunk.js.map": "/newcasestoday-app/static/js/2.175c03b4.chunk.js.map",
+    "static/js/3.8963d704.chunk.js": "/newcasestoday-app/static/js/3.8963d704.chunk.js",
+    "static/js/3.8963d704.chunk.js.map": "/newcasestoday-app/static/js/3.8963d704.chunk.js.map",
+    "index.html": "/newcasestoday-app/index.html",
+    "static/css/main.55f69435.chunk.css.map": "/newcasestoday-app/static/css/main.55f69435.chunk.css.map",
+    "static/js/2.175c03b4.chunk.js.LICENSE.txt": "/newcasestoday-app/static/js/2.175c03b4.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8b917f61.js",
+    "static/js/2.175c03b4.chunk.js",
+    "static/css/main.55f69435.chunk.css",
+    "static/js/main.cb767cbf.chunk.js"
+  ]
+}
