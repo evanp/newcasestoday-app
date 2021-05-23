@@ -2,7 +2,7 @@ import React, {useEffect} from 'react';
 import './App.css';
 import NewCasesToday from './NewCasesToday';
 import { useDispatch, useSelector } from 'react-redux';
-import { Sparklines, SparklinesCurve, SparklinesSpots } from 'react-sparklines';
+import { Sparklines, SparklinesCurve, SparklinesSpots, SparklinesReferenceLine } from 'react-sparklines';
 
 const MONTREAL_URL = "https://data.newcasestoday.app/city/CA/CA_MTR.csv"
 
@@ -25,19 +25,25 @@ function App(props) {
           const lines = text.split('\n')
           const rows = lines.map(line => line.split(';'))
           const data = rows.filter(row => row[0].length > 0)
-          const latest = data[data.length - 1]
-          const delta = parseInt(latest[1], 10) - parseInt(data[data.length - 2][1], 10)
-          const trend = data.slice(-28 * 2)
-          const timeline = trend.map(datum => datum[1])
+          const timeline = data.map(datum => parseInt(datum[1]))
+          const sda = timeline.map((value, idx, arr) => {
+            const pts = arr.slice(Math.max(idx - 7, 0), idx + 1);
+            return (pts.length == 0) ? 0 : Math.round(pts.reduce((a, b) => a + b)/pts.length)
+          })        
+          const recent = sda.slice(-28)
+          const lastDate =  data[data.length - 1][0]
+          const newCases = timeline[timeline.length - 1]
+          const delta = newCases - timeline[timeline.length - 2]
 
-          if (latest) {
+          if (data.length > 0) {
               dispatch({
                   type: "FETCH_NEW_CASES",
                   data: {
-                      lastDate: latest[0],
-                      newCases: parseInt(latest[1], 10),
+                      lastDate: lastDate,
+                      newCases: newCases,
                       delta: delta,
-                      timeline: timeline
+                      sda: sda[sda.length - 1],
+                      timeline: recent
                   }
               });
           }
@@ -58,6 +64,7 @@ function App(props) {
         <NewCasesToday newCases={newCases} delta={delta} min={0} />
         <Sparklines data={timeline}>
           <SparklinesCurve color="red" />
+          <SparklinesReferenceLine type="median" />
           <SparklinesSpots />
         </Sparklines>
       </header>
