@@ -49,6 +49,8 @@ function App(props) {
     dispatch(getNewCasesToday());
   });
 
+  document.title = `New COVID-19 cases in ${location} as of ${lastDate}`;
+
   return (
     <div className="App">
       <header className="App-header">
