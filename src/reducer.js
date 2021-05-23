@@ -1,7 +1,7 @@
 let initialState = {
     lastDate: (new Date()).toISOString().slice(0, 10),
     newCases: 0,
-    delta: null
+    delta: 0
 }
 
 export default function reducer(currentState = initialState, action) {

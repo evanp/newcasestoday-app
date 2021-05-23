@@ -13,3 +13,12 @@ test('renders learn react link', () => {
   const newCasesElement = screen.queryByTestId('new-cases-today');
   expect(newCasesElement).toBeInTheDocument();
 });
+
+
+test('Last date is date-ish', () => {
+  render(<Provider store={store}><App /></Provider>);
+  const lastDate = screen.queryByTestId('last-date');
+  expect(lastDate).toBeInTheDocument();
+  const lastDateText = lastDate.textContent;
+  expect(lastDateText).toMatch(/^\d{4}-\d{2}-\d{2}$/);
+});
